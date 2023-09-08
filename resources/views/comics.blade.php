@@ -2,7 +2,7 @@
 
 @section('main-content')
     <div class="container">
-        <h1>Lista dei fumetti</h1>
+        <h1 class="my-4">Lista dei fumetti</h1>
         <div class="row">
             @foreach (config('comics') as $fumetto)
                 <div class="col-md-6 mb-4">
@@ -13,7 +13,7 @@
                         <div class="col-md-8">
                             <h2>{{ $fumetto['title'] }}</h2>
                             <p>{{ $fumetto['description'] }}</p>
-                            <p><strong>Prezzo:</strong> ${{ $fumetto['price'] }}</p>
+                            <p><strong>Prezzo:</strong> {{ $fumetto['price'] }}</p>
                             <p><strong>Data:</strong> {{ $fumetto['sale_date'] }}</p>
                         </div>
                     </div>
